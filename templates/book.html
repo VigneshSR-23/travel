@@ -1,0 +1,64 @@
+<html>
+    {% load static %}
+    <head>
+        <style>
+            h1 {text-align: center;color:white;}
+            h2 {text-align: center;color:white;}
+            h3 {text-align: center; color:white;}
+            h4 {text-align: center; color:white;}
+            h5 {text-align: center;color:white;}
+            p{text-align: left;
+            font-size: medium;}
+            h6 {text-align: center;}
+            input{text-align: center;}
+            body.scroll {
+                padding:15px;
+                overflow-x: auto;
+                overflow-y: auto;
+                text-align:center;
+                width: 1000px;
+                height: 350px;
+            }
+        </style>
+        BOOKING PAGE
+    </head>
+    <body class="scroll" bgcolor ="white">
+    <h1>               BOOKING PORTAL         </h1> <br><br> 
+   
+        <link rel="stylesheet" href="{% static 'style.css'%}">
+    <form action="book" method="post">
+        {% csrf_token %}
+    <center><label>ENTER CITY TO BE BOOKED </label></center> <br>
+       <center> <input type="text" name="city" ><br></center>
+     <center><label>ENTER EMAIL ID </label></center> <br>
+    <center> <input type="text" name="mail" > </center><br>
+    <center><label>ENTER USERNAME </label></center> <br>
+    <center> <input type="text" name="uses" > </center><br>
+    <center><label>ENTER PASSWORD </label></center> <br>
+    <center> <input type="password" name="pas" > </center><br>
+        <input type="submit"><br>
+        <p> <a href="/">GO BACK</a><p>
+    </form>
+    <div>
+        {% for message in messages %}
+        <h6> {{message}}</h6>
+        <br>
+        {% endfor %}
+    </div>
+        <div class="scroll">
+            <h3>       USER INFORMATION :        </h3><br>
+                           <h4> NAME :{{des.names}}  </h4> <br><br>
+                           <h4> EMAIL Id :{{des.email}}</h4>  <br> <br>
+                           <h4> PLACES BOUGHT :{{des.places}}</h4><br>  <br> 
+                           <h4> BALANCE :${{des.wallet}}</h4> <br><br>  
+                        </div><br>
+<div>
+    <br>
+   <br>
+   <br>
+    <br>
+</div>
+
+    
+    </body>
+</html>
