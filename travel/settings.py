@@ -25,7 +25,6 @@ SECRET_KEY = 'cdb94too^35#eb=^6z0#&x%g8hk7)t2_80lwr61beb@(i9wgzc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1','travello-2021.herokuapp.com']
-
 # Application definition
 
 INSTALLED_APPS = [
